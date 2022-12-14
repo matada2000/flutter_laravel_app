@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_laravel_app/screens/login_dart.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -50,7 +51,9 @@ class _HomeScreenState extends State<HomeScreen> {
             ListTile(
               title: Text('Login'),
               leading: Icon(Icons.login),
-              onTap: () {},
+              onTap: () {
+                Navigator.of(context).push(MaterialPageRoute(builder: ((context) => LoginScreen())));
+              },
             ),
             ListTile(
               title: Text('Logout'),
